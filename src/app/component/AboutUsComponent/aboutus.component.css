@@ -1,0 +1,48 @@
+/* Make the image fully responsive */
+  @import url('https://fonts.googleapis.com/');
+
+.container {
+  width:1240px;
+  height:100%;
+  margin-top: 30px;
+}
+
+div{
+
+    padding-bottom: 1cm;
+
+}
+
+p{
+
+  display:block;
+  font-family: 'Kalam', cursive;
+
+}
+h1{
+
+ font-family: 'Cherry Swash', cursive;
+
+}
+h2{
+   font-family: 'Cherry Swash', cursive;
+
+
+}
+
+h6{
+font-family: 'Kalam', cursive;
+   font-weight: bold;
+}
+
+h7{
+  font-family: 'Kalam', cursive;
+
+}
+
+img {
+    display: block;
+    margin: auto;
+    width: 80%;
+}
+.classWithPad { margin:50px; padding:50px; }

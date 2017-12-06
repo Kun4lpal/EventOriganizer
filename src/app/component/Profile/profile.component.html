@@ -1,0 +1,28 @@
+
+<div class="container" *ngIf="items" style="margin-top: 30px;">
+    <div class="row">        
+        <div class="col-lg-4 text-center" style="margin-top:10px; margin-bottom: 30px;">
+            <img src="{{items.pic}}" class="rounded-circle" style="height: 250px; width: 250px;" alt="avatar">
+            <h6 class="mt-2">Upload a different photo</h6>
+            <label class="custom-file">
+                <input type="file" id="file" class="custom-file-input"
+                (change)="uploadProfileImage($event)">
+                <span class="custom-file-control">Choose file</span>
+            </label>
+        </div>
+
+        <div class="col-lg-6">
+            <mat-tab-group class="demo-tab-group">
+                <mat-tab label="Profile">
+                    <app-view-profile></app-view-profile>
+                </mat-tab>
+                <mat-tab label="Edit">
+                    <app-edit-profile></app-edit-profile>
+                </mat-tab>
+                <mat-tab label="My Events">
+                    <app-my-events></app-my-events>
+                </mat-tab>            
+            </mat-tab-group>
+        </div>
+    </div>
+</div>

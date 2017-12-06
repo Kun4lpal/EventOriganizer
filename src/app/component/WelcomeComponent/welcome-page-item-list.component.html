@@ -1,0 +1,17 @@
+<div class="row" style="margin-top:30px">
+    <div *ngFor="let event of listOfItems | values" class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+            <a style="cursor: pointer"><img class="card-img-top" src="{{event.image}}" alt=""></a>
+        <div class="card-body">
+            <h4 class="card-title">
+            <a style="cursor: pointer; color: #3818F4" (click)="onNavigateToSummary(event)">{{event.name}}</a>
+            </h4>
+            <h5>{{event.fee}}$</h5>
+            <p class="card-text">{{event.description}}</p>
+        </div>
+            <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9734; &#9734;</small>
+            </div>
+        </div>
+    </div>
+</div>

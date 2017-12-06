@@ -1,0 +1,26 @@
+
+<div class="card border-dark" *ngFor="let event of myEvents | values" style="margin-top: 10px;" (click)="onNavigateToSummary(event)">
+    <div class="inline">
+        <div class="float-left" *ngIf="event">
+            <img class="rounded-circle" style="width: 100px; height: 100px;" src="{{event.image}}" alt="Card image cap">
+        </div>
+        <div align="center" *ngIf="event">
+            <div class="card-block">
+                <h2 class="card-title"> <strong>{{event.name}}</strong></h2>
+                <h6 class="card-subtitle">{{event.date|date: 'short'}}</h6>         
+            </div>
+        </div>        
+    </div>
+</div>
+
+<div class="card border-dark" style="margin-top: 10px;" *ngIf="flag">
+    <div class="inline">
+        <div align="center">
+            <div class="card-block">
+                <h2 class="card-title"> No Registered Events </h2>    
+            </div>
+        </div>        
+    </div>
+</div>
+
+

@@ -1,0 +1,30 @@
+<div>  
+  <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin">
+                
+                <!-- <span *ngif="error"> {{ error }} </span> -->
+
+                <span id="reauth-email" class="reauth-email"></span>
+
+                <input name="email_required" [style.border-color]="red" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus
+                    [(ngModel)]="email">
+                
+                <input type="password" [style.border-color]="red" name="password_required" id="inputPassword" class="form-control" placeholder="Password" required
+                    [(ngModel)]="password">
+
+                <div id="remember" class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" (click)="loginUser(email, password)" >
+                    Sign in
+                </button>
+                 <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" (click)="loginGoogle()" >
+                    Login with Google
+                </button>
+                
+            </form><!-- /form -->
+            <a (click)="onCloseConfirm()" style="cursor: pointer;"><p class="register text-center">Register</p></a>
+</div>

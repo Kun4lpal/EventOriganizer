@@ -1,0 +1,128 @@
+<div class="container" style="margin-top: 20px;">
+    <div class="row">
+        <div class="col-md-12 border border-dark">
+            <form class="form-horizontal" #createEvent="ngForm" (ngSubmit)="onSubmit(createEvent.value)" >
+
+                    <!-- Form Name -->
+                    <legend align='center' style="padding-bottom: 10px;"> <strong>Create an Event</strong> </legend>
+
+                    <!-- Text input-->
+
+                    <div class="form-group form-inline">
+                        <div class="col-md-4"><span class="float-right"><strong>Event Name</strong></span></div> 
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-user"></i>
+                                </div>
+                                    <input id="Name" name="name" type="text" placeholder="Name" class="form-control input-md" ngModel>
+                            </div>   
+                        </div>  
+                    </div>
+
+
+                    <!-- Picture Button --> 
+                    <div align="center"  class="form-group form-inline">
+                    <div class="col-md-4"><span class="float-right"><strong>Upload Photos</strong></span></div> 
+                    <div class="col-md-4">
+                        <input id="Upload Photos" (change)="onPhotoSelect($event)" name="Upload Photos" class="input-file" type="file">
+                    </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div align="center"  class="form-group form-inline">
+                    <div class="col-md-4"><span class="float-right"><strong>Event Dates</strong></span></div> 
+                    <div class="col-md-4">
+
+                    <div align="center"  class="input-group">
+                        <div class="input-group-addon">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                            
+                        </div>
+                        <input id="Date Of Birth" name="date" type="date" placeholder="Date of Event" class="form-control input-md" ngModel>
+                        </div>
+                    
+                        
+                    </div>
+                    </div>
+
+                    <div align="center"  class="form-group form-inline">
+                    <div class="col-md-4"><span class="float-right"><strong>Time</strong></span></div>   
+                    <div class="col-md-4">
+
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                            
+                        </div>
+                        <input id="Time" name="time" type="time" placeholder="From" class="form-control input-md" ngModel>
+                        
+                        </div>
+                    
+                        
+                    </div>
+                    </div>
+                    <div align="center"  class="form-group form-inline">
+                        <div class="col-md-4"><span class="float-right"><strong>Cost of Attendance</strong></span></div>   
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <span class="input-group-addon">$</span>          
+                                    <input id="Cost of Attendence" name="fee" type="number" placeholder="Cost of Attendence" class="form-control input-md" ngModel>
+                                </div>                       
+                            </div>
+                    </div>
+
+                    <div align="center" class="form-group form-inline">
+                    <div class="col-md-4">
+                        <span class="float-right"><strong>Event Address</strong></span>
+                    </div>   
+                    <div class="col-md-2  col-xs-4">
+                    <input id="Permanent Address" name="street" type="text" placeholder="Street" class="form-control input-md" ngModel>
+                    </div>
+
+                    <div class="col-md-2 col-xs-4" style="margin-left: 25px;" >
+                    <input id="Permanent Address" name="city" type="text" placeholder="City" class="form-control input-md" ngModel>
+                    </div>
+
+                    <div class="col-md-2 col-xs-4" style="margin-left: 25px;">
+                        <input id="Permanent Address" name="state" type="text" placeholder="State" class="form-control input-md" ngModel>
+                        </div>
+                    
+                    </div>
+
+                    <!-- Text input-->
+                   
+                    <!-- Text input-->
+                    <div align="center" class="form-group form-inline">
+                    <div class="col-md-4"><span class="float-right"><strong>Venyou</strong></span></div> 
+                    <div class="col-md-4">
+                    <div class="input-group">
+                        <input id="Email Address" name="venue" type="text" placeholder="Venue" class="form-control input-md" ngModel>
+                        
+                        </div>
+                    
+                    </div>
+                    </div>
+
+                    <!-- Textarea -->
+                    <div align="center" class="form-group form-inline">
+                    <div class="col-md-4"><span class="float-right"><strong>Description</strong></span></div> 
+                    <div class="col-md-4">                     
+                        <textarea class="form-control" rows="10" cols="40"  id="Description" name="description" placeholder="Describe your event" ngModel></textarea>
+                    </div>
+                    </div>
+
+
+                    <div align="center" class="form-group form-inline">
+                    <label class="col-md-4 control-label" ></label>  
+                    <div class="col-md-4">
+                        <button class="btn btn-success" type="submit"> Submit</button>
+                        <button class="btn btn-danger" type="reset"> Clear</button>
+                            
+                    </div>
+                    </div>
+
+        </form>
+    </div>
+    </div>
+</div>

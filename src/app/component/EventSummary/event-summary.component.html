@@ -1,0 +1,56 @@
+<div>
+
+  <!-- Carousel -->
+  <div class="container" >
+    <div id="demo" class="carousel slide" data-ride="carousel" >
+      <!-- Indicators -->
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{{event.image}}" width="30" height="30">
+        </div>
+      </div>
+      
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        
+      </a></div>
+      
+  </div>
+
+  <div  align="center" style="width: 1200px; box-shadow: 10px 20px 20px 20px grey;  margin-top:5px; margin: 0 auto ">
+  <div align=center >
+  <h1> <strong>{{event.name}}</strong> </h1> <br><br>
+  </div>
+    <!-- Info Card  -->
+
+    <div  align="center" style="text-align: center;"  >
+      <h3> Date and Time: </h3>
+      <h6>{{event.date | date:'short'}}</h6><br><br>
+
+      <h3> Location: </h3>
+      <h6>{{event.venue + ',' + event.street + ',' + event.city + ',' + event.state}}</h6><br><br>
+  
+      <h3>Cost: </h3>
+      <h6>{{event.fee}}$</h6><br><br>
+  
+      <h3>Organizer: </h3>
+      <h6>{{event.host_name}}</h6> <br><br>
+
+      <h3>Description: </h3>
+      <h6>{{event.description}}</h6> <br><br>
+
+  
+    </div>
+
+<!-- Sign Up Button -->
+<div align="center" style="height: 200px; margin: 100px">
+    <button type="button" *ngIf="regbutton" class="btn btn-success" (click)="RegisterEvent()"> Register for Event </button>
+    <button *ngIf="unregbutton" type="button" class="btn btn-success" style="background: red">Already Registered</button>
+</div>
+
+</div>
+</div>
